@@ -47,8 +47,8 @@ String 数据类型包含一些特殊的字符字面量，也叫转义序列，�
 
 ## 2 字符串的特点
 
-<font color="red">**ECMAScript 中的字符串是不可变的，也就是说，字符串一旦创建，它的值就不能改变。**</font>要改变某个变量保存的字符串，
-首先要销毁原来的字符串，然后再用另一个包含新值的字符串填充该变量。例如：
+<span style="color: red;font-weight: bold">ECMAScript 中的字符串是不可变的，也就是说，字符串一旦创建，它的值就不能改变。</span>
+要改变某个变量保存的字符串，首先要销毁原来的字符串，然后再用另一个包含新值的字符串填充该变量。例如：
 
     var lang = "Java";
     lang = lang + "Script";
@@ -74,7 +74,7 @@ String 数据类型包含一些特殊的字符字面量，也叫转义序列，�
     var foundAsString = found.toString(); // 字符串 "true"
 
 数值、布尔值、对象和字符串值(没错，每个字符串也都有一个 toString()方法，该方法返回字符串的一个副本) 都有 toString() 方法。
-<font color="red">**但 null 和 undefined 值没有这个方法。**</font>
+<span style="color: red;font-weight: bold">但 null 和 undefined 值没有这个方法。</span>
 
 多数情况下，调用 toString() 方法不必传递参数。但是，在调用**数值**的 toString() 方法时，可以传递一个参数：输出数值的基数。默认情况下，
 toString() 方法以十进制格式返回数值的字符串表示。而通过传递基数，toString() 可以输出以二进制、八进制、十六进制，乃至其他任意有效
@@ -91,8 +91,8 @@ toString() 方法以十进制格式返回数值的字符串表示。而通过传
 通过这个例子可以看出，通过指定基数，toString() 方法会改变输出的值。而数值 10 根据基数的不同，可以在输出时被转换为不同的数值格式。注意，
 默认的 (没有参数的) 输出值与指定基数 10 时的输出值相同。
 
-<font color="red">**在不知道要转换的值是不是 null 或 undefined 的情况下，还可以使用转型函数 String() ，
-这个函数能够将任何类型的值转换为字符串。**</font>
+<span style="color: red;font-weight: bold">在不知道要转换的值是不是 null 或 undefined 的情况下，还可以使用转型函数 String() ，
+这个函数能够将任何类型的值转换为字符串。</span>
 
 String() 函数遵循下列转换规则：
 
