@@ -64,4 +64,29 @@ null, 则分别调用 String() 函数并取得字符串 "undefined" 和 "null"�
 
     var result = 2 - 1;
 
+与加法操作符类似，ECMAScript 中的减法操作符在处理各种数据类型转换时，同样需要遵循一些特殊规则，如下所示：
+
+* 如果两个操作符都是数值，则执行常规的算术减法操作并返回结果；
+* 如果有一个操作数是 NaN ，则结果是 NaN ；
+* 如果是 Infinity 减 Infinity ，则结果是 NaN ；
+* 如果是 -Infinity 减 -Infinity ，则结果是 NaN ；
+* 如果是 Infinity 减 -Infinity ，则结果是 Infinity ;
+* 如果是 -Infinity 减 Infinity ，则结果是 -Infinity ；
+* 如果是 +0 减 +0 ，则结果是 +0 ；
+* 如果是 +0 减 -0 ，则结果是 -0 ；
+* 如果是 -0 减 -0 ，则结果是 +0；
+* 如果有一个操作数是字符串、布尔值、null 或 undefined ，则先在后台调用 Number() 函数将其转换为数值，然后再根据签名的规则执行减法计算。
+  如果转换的结果是 NaN，则减法的结果就是 NaN；
+* 如果有一个操作数是对象，则调用对象的 valueOf() 方法以取得表示该对象的数值。如果得到的值是 NaN ，则减法的结果就是 NaN 。如果对象没有
+  valueOf() 方法，则调用其 toString() 方法并将得到的字符串转换为数值。
+
+下面几个例子展示了上面的规则：
+
+    var result1 = 5 - true;     // 4, 因为 true 被转换成了 1
+    var result2 = NaN - 1;      // NaN
+    var result3 = 5 -3;         // 2
+    var result4 = 5 - "";       // 5, 因为 "" 被转换成了 0
+    var result5 = 5 - "2";      // 3, 因为 "2" 被转换成了 2
+    var result6 = 5 - null;     // 5, 因为 null 被转换成了 0
+
 
