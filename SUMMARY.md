@@ -6,5 +6,6 @@
         * [01 加性操作符](./javascript/string/additive.md)
         * [02 string包装类型](./javascript/string/string-wrapper.md)
         * [03 字符串操作方法](./javascript/string/string-manipulation.md)
-        * [04 其他字符串方法](./javascript/string/string-other-method.md)
+        * [04 字符串的模式匹配方法](./javascript/string/string-pattern.md)
+        * [05 其他字符串方法](./javascript/string/string-other-method.md)
         * [问题](./javascript/string/problem.md)
