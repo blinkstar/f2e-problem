@@ -40,3 +40,17 @@
 则每次都给 indexOf() 传递上一次的位置加 1 。这样，就确保了每次新搜索都从上一次找到的子字符串的后面开始。每次搜索返回的位置依次被保存
 在数组 positions 中，以便将来使用。
 
+## 4 trim() 方法
+
+ECMAScript 5 为所有字符串定义了 trim() 方法。这个方法会创建一个字符串的副本，删除前置及后缀的所有空格，然后返回结果。例如：
+
+    var stringValue = "         hello world        ";
+    var trimmedStringValue = stringValue.trim();
+    console.log(stringValue);                  // "         hello world        "
+    console.log(trimmedStringValue);           // "hello world"
+
+<span style="color: red;font-weight: bold">由于 trim() 返回的是字符串的副本，所以原始字符串中的前置及后缀空格会保持不变。</span>  
+
+支持这个方法的浏览器有 IE9+、Firefox3.5+、Safari 5+、Opera 10.5+ 和 Chrome。此外，Firefox 3.5+、Safari 5+ 和 Chrome 8 + 还支持
+非标准的 trimLeft() 和 trimRight() 方法，分别用于删除字符串开头和末尾的空格。
+
