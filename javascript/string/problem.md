@@ -12,9 +12,9 @@
 
 ### 2. 请对 String 类添加 toMoney 方法，实现如下效果：
 
-"120.88".toMoney()                 =>      "120.88"    
-"12000.88".toMoney()               =>      "12,000.88"    
-"12000000000.88".toMoney()         =>      "12,000,000,000.88"    
+	// "120.88".toMoney()          => "120.88"    
+	// "12000.88".toMoney()        => "12,000.88"    
+	// "12000000000.88".toMoney()  => "12,000,000,000.88"    
 
     String.prototype.toMoney = function () {
             var stringValue = this.toString();
@@ -42,4 +42,4 @@
         "12000.88".toMoney();
         "12000000000.88".toMoney();
 
-[JS将number数值转化成为货币格式](//www.cnblogs.com/mingmingruyuedlut/archive/2013/05/19/3082177.html)
+[JS将number数值转化成为货币格式](https://www.cnblogs.com/mingmingruyuedlut/archive/2013/05/19/3082177.html)
