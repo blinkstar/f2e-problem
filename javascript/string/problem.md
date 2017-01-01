@@ -15,3 +15,31 @@
   "120.88".toMoney()                 =>      "120.88"
   "12000.88".toMoney()               =>      "12,000.88"
   "12000000000.88".toMoney()         =>      "12,000,000,000.88"
+
+    String.prototype.toMoney = function () {
+            var stringValue = this.toString();
+            var result = new Array();
+            var arr = stringValue.split('.'),
+                intStr = arr[0],
+                floatStr = '.' + arr[1];
+
+            result.unshift(floatStr);
+
+            var pos = intStr.lastIndexOf("000");
+            var zero = ',000';
+
+            while(pos > -1){
+                result.unshift(zero);
+                intStr = intStr.substring(0, intStr.length - 3);
+                pos = intStr.lastIndexOf("000");
+            }
+
+            result.unshift(intStr);
+            console.log(result.join(''));
+        };
+
+        "120.88".toMoney();
+        "12000.88".toMoney();
+        "12000000000.88".toMoney();
+
+[JS将number数值转化成为货币格式](//www.cnblogs.com/mingmingruyuedlut/archive/2013/05/19/3082177.html)
