@@ -39,7 +39,7 @@
 
 
 我们同样可以使用正则表达式进行非贪婪匹配。
-<span style="color: red;font-weight: bold">只须在待匹配的字符后跟随一个问号即可</span>："??" 、 "+?" 、 "*?" 或 "{1,5}" 。
+<span style="color: red;font-weight: bold">只须在待匹配的字符后跟随一个问号即可</span>："??" 、 "+?" 、 "*?" 或 "{1,5}?" 。
 
 比如，正则表达式 /a+/ 可以匹配一个或多个连续的字母 a 。当使用 "aaa" 作为匹配字符串时，正则表达式会匹配它的三个字符。
 但是 /a+?/ 也可以匹配一个或多个连续字母 a ，<span style="color: red;font-weight: bold">但它是尽可能少地匹配</span>。
