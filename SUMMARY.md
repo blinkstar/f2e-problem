@@ -9,6 +9,8 @@
         * [04 选择、分组和引用](./javascript/regexp/group.md)
         * [05 指定匹配位置](./javascript/regexp/position.md)
         * [06 修饰符](./javascript/regexp/flag.md)
+        * [07 用于模式匹配的String方法](./javascript/regexp/string-method.md)
+        * [08 RegExp对象](./javascript/regexp/regexp-object.md)
     * [02 string](./javascript/string/string.md)
         * [01 加性操作符](./javascript/string/additive.md)
         * [02 string包装类型](./javascript/string/string-wrapper.md)
